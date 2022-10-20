@@ -1,0 +1,1008 @@
+{
+  "apiVersion": "1.0.0",
+  "swaggerVersion": "1.2",
+  "basePath": "https://icecap2.eastus2.az.3pc.att.com/api/dmacs",
+  "resourcePath": "/Users",
+  "apis": [
+    {
+      "path": "/Users/{id}/accessTokens/{fk}",
+      "operations": [
+        {
+          "method": "GET",
+          "nickname": "prototype.__findById__accessTokens",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "fk",
+              "description": "Foreign key for accessTokens",
+              "required": true,
+              "allowMultiple": false,
+              "type": "any"
+            },
+            {
+              "paramType": "path",
+              "name": "id",
+              "description": "User id",
+              "required": true,
+              "allowMultiple": false,
+              "type": "any"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Find a related item by id for accessTokens.",
+          "type": "AccessToken"
+        },
+        {
+          "method": "DELETE",
+          "nickname": "prototype.__destroyById__accessTokens",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "fk",
+              "description": "Foreign key for accessTokens",
+              "required": true,
+              "allowMultiple": false,
+              "type": "any"
+            },
+            {
+              "paramType": "path",
+              "name": "id",
+              "description": "User id",
+              "required": true,
+              "allowMultiple": false,
+              "type": "any"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 204,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Delete a related item by id for accessTokens.",
+          "type": "void"
+        },
+        {
+          "method": "PUT",
+          "nickname": "prototype.__updateById__accessTokens",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "fk",
+              "description": "Foreign key for accessTokens",
+              "required": true,
+              "allowMultiple": false,
+              "type": "any"
+            },
+            {
+              "paramType": "body",
+              "name": "data",
+              "required": false,
+              "allowMultiple": false,
+              "type": "User"
+            },
+            {
+              "paramType": "path",
+              "name": "id",
+              "description": "User id",
+              "required": true,
+              "allowMultiple": false,
+              "type": "any"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Update a related item by id for accessTokens.",
+          "type": "AccessToken"
+        }
+      ]
+    },
+    {
+      "path": "/Users/{id}/accessTokens",
+      "operations": [
+        {
+          "method": "GET",
+          "nickname": "prototype.__get__accessTokens",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "filter",
+              "required": false,
+              "allowMultiple": false,
+              "type": "object"
+            },
+            {
+              "paramType": "path",
+              "name": "id",
+              "description": "User id",
+              "required": true,
+              "allowMultiple": false,
+              "type": "any"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Queries accessTokens of User.",
+          "type": "array",
+          "items": {
+            "type": "AccessToken"
+          }
+        },
+        {
+          "method": "POST",
+          "nickname": "prototype.__create__accessTokens",
+          "parameters": [
+            {
+              "paramType": "body",
+              "name": "data",
+              "required": false,
+              "allowMultiple": false,
+              "type": "User"
+            },
+            {
+              "paramType": "path",
+              "name": "id",
+              "description": "User id",
+              "required": true,
+              "allowMultiple": false,
+              "type": "any"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Creates a new instance in accessTokens of this model.",
+          "type": "AccessToken"
+        },
+        {
+          "method": "DELETE",
+          "nickname": "prototype.__delete__accessTokens",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "description": "User id",
+              "required": true,
+              "allowMultiple": false,
+              "type": "any"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 204,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Deletes all accessTokens of this model.",
+          "type": "void"
+        }
+      ]
+    },
+    {
+      "path": "/Users/{id}/accessTokens/count",
+      "operations": [
+        {
+          "method": "GET",
+          "nickname": "prototype.__count__accessTokens",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "where",
+              "description": "Criteria to match model instances",
+              "required": false,
+              "allowMultiple": false,
+              "type": "object"
+            },
+            {
+              "paramType": "path",
+              "name": "id",
+              "description": "User id",
+              "required": true,
+              "allowMultiple": false,
+              "type": "any"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Counts accessTokens of User.",
+          "type": "number",
+          "format": "double"
+        }
+      ]
+    },
+    {
+      "path": "/Users",
+      "operations": [
+        {
+          "method": "POST",
+          "nickname": "create",
+          "parameters": [
+            {
+              "paramType": "body",
+              "name": "data",
+              "description": "Model instance data",
+              "required": false,
+              "allowMultiple": false,
+              "type": "User"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Create a new instance of the model and persist it into the data source.",
+          "type": "User"
+        },
+        {
+          "method": "PATCH",
+          "nickname": "patchOrCreate",
+          "parameters": [
+            {
+              "paramType": "body",
+              "name": "data",
+              "description": "Model instance data",
+              "required": false,
+              "allowMultiple": false,
+              "type": "User"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Patch an existing model instance or insert a new one into the data source.",
+          "type": "User"
+        },
+        {
+          "method": "PUT",
+          "nickname": "replaceOrCreate",
+          "parameters": [
+            {
+              "paramType": "body",
+              "name": "data",
+              "description": "Model instance data",
+              "required": false,
+              "allowMultiple": false,
+              "type": "User"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Replace an existing model instance or insert a new one into the data source.",
+          "type": "User"
+        },
+        {
+          "method": "GET",
+          "nickname": "find",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "filter",
+              "description": "Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string (`{\"where\":{\"something\":\"value\"}}`).  See https://loopback.io/doc/en/lb3/Querying-data.html#using-stringified-json-in-rest-queries for more details.",
+              "required": false,
+              "allowMultiple": false,
+              "type": "object"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Find all instances of the model matched by filter from the data source.",
+          "type": "array",
+          "items": {
+            "type": "User"
+          }
+        }
+      ]
+    },
+    {
+      "path": "/Users/replaceOrCreate",
+      "operations": [
+        {
+          "method": "POST",
+          "nickname": "replaceOrCreate",
+          "parameters": [
+            {
+              "paramType": "body",
+              "name": "data",
+              "description": "Model instance data",
+              "required": false,
+              "allowMultiple": false,
+              "type": "User"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Replace an existing model instance or insert a new one into the data source.",
+          "type": "User"
+        }
+      ]
+    },
+    {
+      "path": "/Users/upsertWithWhere",
+      "operations": [
+        {
+          "method": "POST",
+          "nickname": "upsertWithWhere",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "where",
+              "description": "Criteria to match model instances",
+              "required": false,
+              "allowMultiple": false,
+              "type": "object"
+            },
+            {
+              "paramType": "body",
+              "name": "data",
+              "description": "An object of model property name/value pairs",
+              "required": false,
+              "allowMultiple": false,
+              "type": "User"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Update an existing model instance or insert a new one into the data source based on the where criteria.",
+          "type": "User"
+        }
+      ]
+    },
+    {
+      "path": "/Users/{id}/exists",
+      "operations": [
+        {
+          "method": "GET",
+          "nickname": "exists",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "description": "Model id",
+              "required": true,
+              "allowMultiple": false,
+              "type": "any"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Check whether a model instance exists in the data source.",
+          "type": "boolean"
+        }
+      ]
+    },
+    {
+      "path": "/Users/{id}",
+      "operations": [
+        {
+          "method": "HEAD",
+          "nickname": "exists",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "description": "Model id",
+              "required": true,
+              "allowMultiple": false,
+              "type": "any"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Check whether a model instance exists in the data source.",
+          "type": "boolean"
+        },
+        {
+          "method": "GET",
+          "nickname": "findById",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "description": "Model id",
+              "required": true,
+              "allowMultiple": false,
+              "type": "any"
+            },
+            {
+              "paramType": "query",
+              "name": "filter",
+              "description": "Filter defining fields and include - must be a JSON-encoded string ({\"something\":\"value\"})",
+              "required": false,
+              "allowMultiple": false,
+              "type": "object"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Find a model instance by {{id}} from the data source.",
+          "type": "User"
+        },
+        {
+          "method": "PUT",
+          "nickname": "replaceById",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "description": "Model id",
+              "required": true,
+              "allowMultiple": false,
+              "type": "any"
+            },
+            {
+              "paramType": "body",
+              "name": "data",
+              "description": "Model instance data",
+              "required": false,
+              "allowMultiple": false,
+              "type": "User"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Replace attributes for a model instance and persist it into the data source.",
+          "type": "User"
+        },
+        {
+          "method": "DELETE",
+          "nickname": "deleteById",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "description": "Model id",
+              "required": true,
+              "allowMultiple": false,
+              "type": "any"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Delete a model instance by {{id}} from the data source.",
+          "type": "object"
+        },
+        {
+          "method": "PATCH",
+          "nickname": "prototype.patchAttributes",
+          "parameters": [
+            {
+              "paramType": "body",
+              "name": "data",
+              "description": "An object of model property name/value pairs",
+              "required": false,
+              "allowMultiple": false,
+              "type": "User"
+            },
+            {
+              "paramType": "path",
+              "name": "id",
+              "description": "User id",
+              "required": true,
+              "allowMultiple": false,
+              "type": "any"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Patch attributes for a model instance and persist it into the data source.",
+          "type": "User"
+        }
+      ]
+    },
+    {
+      "path": "/Users/{id}/replace",
+      "operations": [
+        {
+          "method": "POST",
+          "nickname": "replaceById",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "description": "Model id",
+              "required": true,
+              "allowMultiple": false,
+              "type": "any"
+            },
+            {
+              "paramType": "body",
+              "name": "data",
+              "description": "Model instance data",
+              "required": false,
+              "allowMultiple": false,
+              "type": "User"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Replace attributes for a model instance and persist it into the data source.",
+          "type": "User"
+        }
+      ]
+    },
+    {
+      "path": "/Users/findOne",
+      "operations": [
+        {
+          "method": "GET",
+          "nickname": "findOne",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "filter",
+              "description": "Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string (`{\"where\":{\"something\":\"value\"}}`).  See https://loopback.io/doc/en/lb3/Querying-data.html#using-stringified-json-in-rest-queries for more details.",
+              "required": false,
+              "allowMultiple": false,
+              "type": "object"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Find first instance of the model matched by filter from the data source.",
+          "type": "User"
+        }
+      ]
+    },
+    {
+      "path": "/Users/update",
+      "operations": [
+        {
+          "method": "POST",
+          "nickname": "updateAll",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "where",
+              "description": "Criteria to match model instances",
+              "required": false,
+              "allowMultiple": false,
+              "type": "object"
+            },
+            {
+              "paramType": "body",
+              "name": "data",
+              "description": "An object of model property name/value pairs",
+              "required": false,
+              "allowMultiple": false,
+              "type": "User"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Update instances of the model matched by {{where}} from the data source.",
+          "type": "object"
+        }
+      ]
+    },
+    {
+      "path": "/Users/count",
+      "operations": [
+        {
+          "method": "GET",
+          "nickname": "count",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "where",
+              "description": "Criteria to match model instances",
+              "required": false,
+              "allowMultiple": false,
+              "type": "object"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Count instances of the model matched by where from the data source.",
+          "type": "number",
+          "format": "double"
+        }
+      ]
+    },
+    {
+      "path": "/Users/change-stream",
+      "operations": [
+        {
+          "method": "POST",
+          "nickname": "createChangeStream",
+          "parameters": [
+            {
+              "paramType": "form",
+              "name": "options",
+              "required": false,
+              "allowMultiple": false,
+              "type": "object"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Create a change stream.",
+          "type": "ReadableStream"
+        },
+        {
+          "method": "GET",
+          "nickname": "createChangeStream",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "options",
+              "required": false,
+              "allowMultiple": false,
+              "type": "object"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Create a change stream.",
+          "type": "ReadableStream"
+        }
+      ]
+    },
+    {
+      "path": "/Users/login",
+      "operations": [
+        {
+          "method": "POST",
+          "nickname": "login",
+          "parameters": [
+            {
+              "paramType": "body",
+              "name": "credentials",
+              "required": true,
+              "allowMultiple": false,
+              "type": "object"
+            },
+            {
+              "paramType": "query",
+              "name": "include",
+              "description": "Related objects to include in the response. See the description of return value for more details.",
+              "required": false,
+              "allowMultiple": false,
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Login a user with username/email and password.",
+          "type": "object"
+        }
+      ]
+    },
+    {
+      "path": "/Users/logout",
+      "operations": [
+        {
+          "method": "POST",
+          "nickname": "logout",
+          "parameters": [],
+          "responseMessages": [
+            {
+              "code": 204,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Logout a user with access token.",
+          "type": "void"
+        }
+      ]
+    },
+    {
+      "path": "/Users/{id}/verify",
+      "operations": [
+        {
+          "method": "POST",
+          "nickname": "prototype.verify",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "description": "User id",
+              "required": true,
+              "allowMultiple": false,
+              "type": "any"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 204,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Trigger user's identity verification with configured verifyOptions",
+          "type": "void"
+        }
+      ]
+    },
+    {
+      "path": "/Users/confirm",
+      "operations": [
+        {
+          "method": "GET",
+          "nickname": "confirm",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "uid",
+              "required": true,
+              "allowMultiple": false,
+              "type": "string"
+            },
+            {
+              "paramType": "query",
+              "name": "token",
+              "required": true,
+              "allowMultiple": false,
+              "type": "string"
+            },
+            {
+              "paramType": "query",
+              "name": "redirect",
+              "required": false,
+              "allowMultiple": false,
+              "type": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 204,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Confirm a user registration with identity verification token.",
+          "type": "void"
+        }
+      ]
+    },
+    {
+      "path": "/Users/reset",
+      "operations": [
+        {
+          "method": "POST",
+          "nickname": "resetPassword",
+          "parameters": [
+            {
+              "paramType": "body",
+              "name": "options",
+              "required": true,
+              "allowMultiple": false,
+              "type": "object"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 204,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Reset password for a user with email.",
+          "type": "void"
+        }
+      ]
+    },
+    {
+      "path": "/Users/change-password",
+      "operations": [
+        {
+          "method": "POST",
+          "nickname": "changePassword",
+          "parameters": [
+            {
+              "paramType": "form",
+              "name": "oldPassword",
+              "required": true,
+              "allowMultiple": false,
+              "type": "string"
+            },
+            {
+              "paramType": "form",
+              "name": "newPassword",
+              "required": true,
+              "allowMultiple": false,
+              "type": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 204,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Change a user's password.",
+          "type": "void"
+        }
+      ]
+    },
+    {
+      "path": "/Users/reset-password",
+      "operations": [
+        {
+          "method": "POST",
+          "nickname": "setPassword",
+          "parameters": [
+            {
+              "paramType": "form",
+              "name": "newPassword",
+              "required": true,
+              "allowMultiple": false,
+              "type": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 204,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Reset user's password via a password-reset token.",
+          "type": "void"
+        }
+      ]
+    }
+  ],
+  "consumes": [
+    "application/json",
+    "application/x-www-form-urlencoded",
+    "application/xml",
+    "text/xml"
+  ],
+  "produces": [
+    "application/json",
+    "application/xml",
+    "text/xml",
+    "application/javascript",
+    "text/javascript"
+  ],
+  "models": {
+    "User": {
+      "id": "User",
+      "properties": {
+        "realm": {
+          "type": "string"
+        },
+        "username": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "emailVerified": {
+          "type": "boolean"
+        },
+        "id": {
+          "type": "number",
+          "format": "double"
+        }
+      },
+      "required": [
+        "email"
+      ]
+    },
+    "AccessToken": {
+      "id": "AccessToken",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "ttl": {
+          "defaultValue": 1209600,
+          "type": "number",
+          "format": "double",
+          "description": "time to live in seconds (2 weeks by default)"
+        },
+        "scopes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Array of scopes granted to this access token."
+        },
+        "created": {
+          "type": "string",
+          "format": "date"
+        },
+        "userId": {
+          "type": "number",
+          "format": "double"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    }
+  }
+}

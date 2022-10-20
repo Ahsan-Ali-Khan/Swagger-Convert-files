@@ -1,0 +1,310 @@
+{
+  "apiVersion": "1.0.0",
+  "swaggerVersion": "1.2",
+  "basePath": "https://icecap2.eastus2.az.3pc.att.com/api/dmacs",
+  "resourcePath": "/tbliqrsdclocation",
+  "apis": [
+    {
+      "path": "/tbliqrsdclocation/replaceOrCreate",
+      "operations": [
+        {
+          "method": "POST",
+          "nickname": "replaceOrCreate",
+          "parameters": [
+            {
+              "paramType": "body",
+              "name": "data",
+              "description": "Model instance data",
+              "required": false,
+              "allowMultiple": false,
+              "type": "tbliqrsdclocation"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Replace an existing model instance or insert a new one into the data source.",
+          "type": "tbliqrsdclocation"
+        }
+      ]
+    },
+    {
+      "path": "/tbliqrsdclocation",
+      "operations": [
+        {
+          "method": "PUT",
+          "nickname": "replaceOrCreate",
+          "parameters": [
+            {
+              "paramType": "body",
+              "name": "data",
+              "description": "Model instance data",
+              "required": false,
+              "allowMultiple": false,
+              "type": "tbliqrsdclocation"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Replace an existing model instance or insert a new one into the data source.",
+          "type": "tbliqrsdclocation"
+        },
+        {
+          "method": "GET",
+          "nickname": "find",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "filter",
+              "description": "Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string (`{\"where\":{\"something\":\"value\"}}`).  See https://loopback.io/doc/en/lb3/Querying-data.html#using-stringified-json-in-rest-queries for more details.",
+              "required": false,
+              "allowMultiple": false,
+              "type": "object"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Find all instances of the model matched by filter from the data source.",
+          "type": "array",
+          "items": {
+            "type": "tbliqrsdclocation"
+          }
+        }
+      ]
+    },
+    {
+      "path": "/tbliqrsdclocation/upsertWithWhere",
+      "operations": [
+        {
+          "method": "POST",
+          "nickname": "upsertWithWhere",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "where",
+              "description": "Criteria to match model instances",
+              "required": false,
+              "allowMultiple": false,
+              "type": "object"
+            },
+            {
+              "paramType": "body",
+              "name": "data",
+              "description": "An object of model property name/value pairs",
+              "required": false,
+              "allowMultiple": false,
+              "type": "tbliqrsdclocation"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Update an existing model instance or insert a new one into the data source based on the where criteria.",
+          "type": "tbliqrsdclocation"
+        }
+      ]
+    },
+    {
+      "path": "/tbliqrsdclocation/{id}/replace",
+      "operations": [
+        {
+          "method": "POST",
+          "nickname": "replaceById",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "description": "Model id",
+              "required": true,
+              "allowMultiple": false,
+              "type": "any"
+            },
+            {
+              "paramType": "body",
+              "name": "data",
+              "description": "Model instance data",
+              "required": false,
+              "allowMultiple": false,
+              "type": "tbliqrsdclocation"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Replace attributes for a model instance and persist it into the data source.",
+          "type": "tbliqrsdclocation"
+        }
+      ]
+    },
+    {
+      "path": "/tbliqrsdclocation/{id}",
+      "operations": [
+        {
+          "method": "PUT",
+          "nickname": "replaceById",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "description": "Model id",
+              "required": true,
+              "allowMultiple": false,
+              "type": "any"
+            },
+            {
+              "paramType": "body",
+              "name": "data",
+              "description": "Model instance data",
+              "required": false,
+              "allowMultiple": false,
+              "type": "tbliqrsdclocation"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Replace attributes for a model instance and persist it into the data source.",
+          "type": "tbliqrsdclocation"
+        },
+        {
+          "method": "PATCH",
+          "nickname": "prototype.patchAttributes",
+          "parameters": [
+            {
+              "paramType": "body",
+              "name": "data",
+              "description": "An object of model property name/value pairs",
+              "required": false,
+              "allowMultiple": false,
+              "type": "tbliqrsdclocation"
+            },
+            {
+              "paramType": "path",
+              "name": "id",
+              "description": "tbliqrsdclocation id",
+              "required": true,
+              "allowMultiple": false,
+              "type": "any"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Patch attributes for a model instance and persist it into the data source.",
+          "type": "tbliqrsdclocation"
+        }
+      ]
+    },
+    {
+      "path": "/tbliqrsdclocation/change-stream",
+      "operations": [
+        {
+          "method": "POST",
+          "nickname": "createChangeStream",
+          "parameters": [
+            {
+              "paramType": "form",
+              "name": "options",
+              "required": false,
+              "allowMultiple": false,
+              "type": "object"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Create a change stream.",
+          "type": "ReadableStream"
+        },
+        {
+          "method": "GET",
+          "nickname": "createChangeStream",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "options",
+              "required": false,
+              "allowMultiple": false,
+              "type": "object"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Create a change stream.",
+          "type": "ReadableStream"
+        }
+      ]
+    }
+  ],
+  "consumes": [
+    "application/json",
+    "application/x-www-form-urlencoded",
+    "application/xml",
+    "text/xml"
+  ],
+  "produces": [
+    "application/json",
+    "application/xml",
+    "text/xml",
+    "application/javascript",
+    "text/javascript"
+  ],
+  "models": {
+    "tbliqrsdclocation": {
+      "id": "tbliqrsdclocation",
+      "properties": {
+        "CLLI": {
+          "type": "string"
+        },
+        "LNSCLLI": {
+          "type": "string"
+        },
+        "City": {
+          "type": "string"
+        },
+        "County": {
+          "type": "string"
+        },
+        "StreetAddress": {
+          "type": "string"
+        },
+        "ZIPCode": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "CLLI"
+      ]
+    }
+  }
+}

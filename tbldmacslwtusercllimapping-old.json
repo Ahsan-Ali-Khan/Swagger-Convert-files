@@ -1,0 +1,536 @@
+{
+  "apiVersion": "1.0.0",
+  "swaggerVersion": "1.2",
+  "basePath": "https://icecap2.eastus2.az.3pc.att.com/api/dmacs",
+  "resourcePath": "/tbldmacslwtusercllimapping",
+  "apis": [
+    {
+      "path": "/tbldmacslwtusercllimapping",
+      "operations": [
+        {
+          "method": "POST",
+          "nickname": "create",
+          "parameters": [
+            {
+              "paramType": "body",
+              "name": "data",
+              "description": "Model instance data",
+              "required": false,
+              "allowMultiple": false,
+              "type": "tbldmacslwtusercllimapping"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Create a new instance of the model and persist it into the data source.",
+          "type": "tbldmacslwtusercllimapping"
+        },
+        {
+          "method": "PATCH",
+          "nickname": "patchOrCreate",
+          "parameters": [
+            {
+              "paramType": "body",
+              "name": "data",
+              "description": "Model instance data",
+              "required": false,
+              "allowMultiple": false,
+              "type": "tbldmacslwtusercllimapping"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Patch an existing model instance or insert a new one into the data source.",
+          "type": "tbldmacslwtusercllimapping"
+        },
+        {
+          "method": "PUT",
+          "nickname": "replaceOrCreate",
+          "parameters": [
+            {
+              "paramType": "body",
+              "name": "data",
+              "description": "Model instance data",
+              "required": false,
+              "allowMultiple": false,
+              "type": "tbldmacslwtusercllimapping"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Replace an existing model instance or insert a new one into the data source.",
+          "type": "tbldmacslwtusercllimapping"
+        },
+        {
+          "method": "GET",
+          "nickname": "find",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "filter",
+              "description": "Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string (`{\"where\":{\"something\":\"value\"}}`).  See https://loopback.io/doc/en/lb3/Querying-data.html#using-stringified-json-in-rest-queries for more details.",
+              "required": false,
+              "allowMultiple": false,
+              "type": "object"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Find all instances of the model matched by filter from the data source.",
+          "type": "array",
+          "items": {
+            "type": "tbldmacslwtusercllimapping"
+          }
+        }
+      ]
+    },
+    {
+      "path": "/tbldmacslwtusercllimapping/replaceOrCreate",
+      "operations": [
+        {
+          "method": "POST",
+          "nickname": "replaceOrCreate",
+          "parameters": [
+            {
+              "paramType": "body",
+              "name": "data",
+              "description": "Model instance data",
+              "required": false,
+              "allowMultiple": false,
+              "type": "tbldmacslwtusercllimapping"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Replace an existing model instance or insert a new one into the data source.",
+          "type": "tbldmacslwtusercllimapping"
+        }
+      ]
+    },
+    {
+      "path": "/tbldmacslwtusercllimapping/upsertWithWhere",
+      "operations": [
+        {
+          "method": "POST",
+          "nickname": "upsertWithWhere",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "where",
+              "description": "Criteria to match model instances",
+              "required": false,
+              "allowMultiple": false,
+              "type": "object"
+            },
+            {
+              "paramType": "body",
+              "name": "data",
+              "description": "An object of model property name/value pairs",
+              "required": false,
+              "allowMultiple": false,
+              "type": "tbldmacslwtusercllimapping"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Update an existing model instance or insert a new one into the data source based on the where criteria.",
+          "type": "tbldmacslwtusercllimapping"
+        }
+      ]
+    },
+    {
+      "path": "/tbldmacslwtusercllimapping/{id}/exists",
+      "operations": [
+        {
+          "method": "GET",
+          "nickname": "exists",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "description": "Model id",
+              "required": true,
+              "allowMultiple": false,
+              "type": "any"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Check whether a model instance exists in the data source.",
+          "type": "boolean"
+        }
+      ]
+    },
+    {
+      "path": "/tbldmacslwtusercllimapping/{id}",
+      "operations": [
+        {
+          "method": "HEAD",
+          "nickname": "exists",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "description": "Model id",
+              "required": true,
+              "allowMultiple": false,
+              "type": "any"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Check whether a model instance exists in the data source.",
+          "type": "boolean"
+        },
+        {
+          "method": "GET",
+          "nickname": "findById",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "description": "Model id",
+              "required": true,
+              "allowMultiple": false,
+              "type": "any"
+            },
+            {
+              "paramType": "query",
+              "name": "filter",
+              "description": "Filter defining fields and include - must be a JSON-encoded string ({\"something\":\"value\"})",
+              "required": false,
+              "allowMultiple": false,
+              "type": "object"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Find a model instance by {{id}} from the data source.",
+          "type": "tbldmacslwtusercllimapping"
+        },
+        {
+          "method": "PUT",
+          "nickname": "replaceById",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "description": "Model id",
+              "required": true,
+              "allowMultiple": false,
+              "type": "any"
+            },
+            {
+              "paramType": "body",
+              "name": "data",
+              "description": "Model instance data",
+              "required": false,
+              "allowMultiple": false,
+              "type": "tbldmacslwtusercllimapping"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Replace attributes for a model instance and persist it into the data source.",
+          "type": "tbldmacslwtusercllimapping"
+        },
+        {
+          "method": "DELETE",
+          "nickname": "deleteById",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "description": "Model id",
+              "required": true,
+              "allowMultiple": false,
+              "type": "any"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Delete a model instance by {{id}} from the data source.",
+          "type": "object"
+        },
+        {
+          "method": "PATCH",
+          "nickname": "prototype.patchAttributes",
+          "parameters": [
+            {
+              "paramType": "body",
+              "name": "data",
+              "description": "An object of model property name/value pairs",
+              "required": false,
+              "allowMultiple": false,
+              "type": "tbldmacslwtusercllimapping"
+            },
+            {
+              "paramType": "path",
+              "name": "id",
+              "description": "tbldmacslwtusercllimapping id",
+              "required": true,
+              "allowMultiple": false,
+              "type": "any"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Patch attributes for a model instance and persist it into the data source.",
+          "type": "tbldmacslwtusercllimapping"
+        }
+      ]
+    },
+    {
+      "path": "/tbldmacslwtusercllimapping/{id}/replace",
+      "operations": [
+        {
+          "method": "POST",
+          "nickname": "replaceById",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "description": "Model id",
+              "required": true,
+              "allowMultiple": false,
+              "type": "any"
+            },
+            {
+              "paramType": "body",
+              "name": "data",
+              "description": "Model instance data",
+              "required": false,
+              "allowMultiple": false,
+              "type": "tbldmacslwtusercllimapping"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Replace attributes for a model instance and persist it into the data source.",
+          "type": "tbldmacslwtusercllimapping"
+        }
+      ]
+    },
+    {
+      "path": "/tbldmacslwtusercllimapping/findOne",
+      "operations": [
+        {
+          "method": "GET",
+          "nickname": "findOne",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "filter",
+              "description": "Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string (`{\"where\":{\"something\":\"value\"}}`).  See https://loopback.io/doc/en/lb3/Querying-data.html#using-stringified-json-in-rest-queries for more details.",
+              "required": false,
+              "allowMultiple": false,
+              "type": "object"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Find first instance of the model matched by filter from the data source.",
+          "type": "tbldmacslwtusercllimapping"
+        }
+      ]
+    },
+    {
+      "path": "/tbldmacslwtusercllimapping/update",
+      "operations": [
+        {
+          "method": "POST",
+          "nickname": "updateAll",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "where",
+              "description": "Criteria to match model instances",
+              "required": false,
+              "allowMultiple": false,
+              "type": "object"
+            },
+            {
+              "paramType": "body",
+              "name": "data",
+              "description": "An object of model property name/value pairs",
+              "required": false,
+              "allowMultiple": false,
+              "type": "tbldmacslwtusercllimapping"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Update instances of the model matched by {{where}} from the data source.",
+          "type": "object"
+        }
+      ]
+    },
+    {
+      "path": "/tbldmacslwtusercllimapping/count",
+      "operations": [
+        {
+          "method": "GET",
+          "nickname": "count",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "where",
+              "description": "Criteria to match model instances",
+              "required": false,
+              "allowMultiple": false,
+              "type": "object"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Count instances of the model matched by where from the data source.",
+          "type": "number",
+          "format": "double"
+        }
+      ]
+    },
+    {
+      "path": "/tbldmacslwtusercllimapping/change-stream",
+      "operations": [
+        {
+          "method": "POST",
+          "nickname": "createChangeStream",
+          "parameters": [
+            {
+              "paramType": "form",
+              "name": "options",
+              "required": false,
+              "allowMultiple": false,
+              "type": "object"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Create a change stream.",
+          "type": "ReadableStream"
+        },
+        {
+          "method": "GET",
+          "nickname": "createChangeStream",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "options",
+              "required": false,
+              "allowMultiple": false,
+              "type": "object"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Create a change stream.",
+          "type": "ReadableStream"
+        }
+      ]
+    }
+  ],
+  "consumes": [
+    "application/json",
+    "application/x-www-form-urlencoded",
+    "application/xml",
+    "text/xml"
+  ],
+  "produces": [
+    "application/json",
+    "application/xml",
+    "text/xml",
+    "application/javascript",
+    "text/javascript"
+  ],
+  "models": {
+    "tbldmacslwtusercllimapping": {
+      "id": "tbldmacslwtusercllimapping",
+      "properties": {
+        "ERNO": {
+          "length": 7,
+          "type": "string"
+        },
+        "clli": {
+          "length": 11,
+          "type": "string"
+        }
+      },
+      "required": [
+        "ERNO",
+        "clli"
+      ]
+    }
+  }
+}

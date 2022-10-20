@@ -1,0 +1,475 @@
+{
+  "apiVersion": "1.0.0",
+  "swaggerVersion": "1.2",
+  "basePath": "https://icecap2.eastus2.az.3pc.att.com/api/dmacs",
+  "resourcePath": "/reports",
+  "apis": [
+    {
+      "path": "/reports/replaceOrCreate",
+      "operations": [
+        {
+          "method": "POST",
+          "nickname": "replaceOrCreate",
+          "parameters": [
+            {
+              "paramType": "body",
+              "name": "data",
+              "description": "Model instance data",
+              "required": false,
+              "allowMultiple": false,
+              "type": "reports"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Replace an existing model instance or insert a new one into the data source.",
+          "type": "reports"
+        }
+      ]
+    },
+    {
+      "path": "/reports",
+      "operations": [
+        {
+          "method": "PUT",
+          "nickname": "replaceOrCreate",
+          "parameters": [
+            {
+              "paramType": "body",
+              "name": "data",
+              "description": "Model instance data",
+              "required": false,
+              "allowMultiple": false,
+              "type": "reports"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Replace an existing model instance or insert a new one into the data source.",
+          "type": "reports"
+        }
+      ]
+    },
+    {
+      "path": "/reports/upsertWithWhere",
+      "operations": [
+        {
+          "method": "POST",
+          "nickname": "upsertWithWhere",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "where",
+              "description": "Criteria to match model instances",
+              "required": false,
+              "allowMultiple": false,
+              "type": "object"
+            },
+            {
+              "paramType": "body",
+              "name": "data",
+              "description": "An object of model property name/value pairs",
+              "required": false,
+              "allowMultiple": false,
+              "type": "reports"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Update an existing model instance or insert a new one into the data source based on the where criteria.",
+          "type": "reports"
+        }
+      ]
+    },
+    {
+      "path": "/reports/{id}/replace",
+      "operations": [
+        {
+          "method": "POST",
+          "nickname": "replaceById",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "description": "Model id",
+              "required": true,
+              "allowMultiple": false,
+              "type": "any"
+            },
+            {
+              "paramType": "body",
+              "name": "data",
+              "description": "Model instance data",
+              "required": false,
+              "allowMultiple": false,
+              "type": "reports"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Replace attributes for a model instance and persist it into the data source.",
+          "type": "reports"
+        }
+      ]
+    },
+    {
+      "path": "/reports/{id}",
+      "operations": [
+        {
+          "method": "PUT",
+          "nickname": "replaceById",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "description": "Model id",
+              "required": true,
+              "allowMultiple": false,
+              "type": "any"
+            },
+            {
+              "paramType": "body",
+              "name": "data",
+              "description": "Model instance data",
+              "required": false,
+              "allowMultiple": false,
+              "type": "reports"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Replace attributes for a model instance and persist it into the data source.",
+          "type": "reports"
+        },
+        {
+          "method": "PATCH",
+          "nickname": "prototype.patchAttributes",
+          "parameters": [
+            {
+              "paramType": "body",
+              "name": "data",
+              "description": "An object of model property name/value pairs",
+              "required": false,
+              "allowMultiple": false,
+              "type": "reports"
+            },
+            {
+              "paramType": "path",
+              "name": "id",
+              "description": "reports id",
+              "required": true,
+              "allowMultiple": false,
+              "type": "any"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Patch attributes for a model instance and persist it into the data source.",
+          "type": "reports"
+        }
+      ]
+    },
+    {
+      "path": "/reports/change-stream",
+      "operations": [
+        {
+          "method": "POST",
+          "nickname": "createChangeStream",
+          "parameters": [
+            {
+              "paramType": "form",
+              "name": "options",
+              "required": false,
+              "allowMultiple": false,
+              "type": "object"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Create a change stream.",
+          "type": "ReadableStream"
+        },
+        {
+          "method": "GET",
+          "nickname": "createChangeStream",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "options",
+              "required": false,
+              "allowMultiple": false,
+              "type": "object"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Create a change stream.",
+          "type": "ReadableStream"
+        }
+      ]
+    },
+    {
+      "path": "/reports/dmacs/clli_list",
+      "operations": [
+        {
+          "method": "GET",
+          "nickname": "dmacs_clli_list",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "clli",
+              "required": true,
+              "allowMultiple": false,
+              "type": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    {
+      "path": "/reports/dmacs/attribute/info",
+      "operations": [
+        {
+          "method": "GET",
+          "nickname": "dmacs_attribute_info",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "clli",
+              "required": true,
+              "allowMultiple": false,
+              "type": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    {
+      "path": "/reports/dmacs/attribute/report",
+      "operations": [
+        {
+          "method": "GET",
+          "nickname": "dmacs_attribute_report",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "clli",
+              "required": true,
+              "allowMultiple": false,
+              "type": "string"
+            },
+            {
+              "paramType": "query",
+              "name": "nodefic",
+              "required": true,
+              "allowMultiple": false,
+              "type": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    {
+      "path": "/reports/dmacs/utilization/clli_list",
+      "operations": [
+        {
+          "method": "GET",
+          "nickname": "dmacs_utilization_clli_list",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "clli",
+              "required": true,
+              "allowMultiple": false,
+              "type": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    {
+      "path": "/reports/dmacs/utilization/base",
+      "operations": [
+        {
+          "method": "GET",
+          "nickname": "dmacs_utilization_base",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "clli",
+              "required": true,
+              "allowMultiple": false,
+              "type": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    {
+      "path": "/reports/dmacs/utilization/report",
+      "operations": [
+        {
+          "method": "GET",
+          "nickname": "dmacs_utilization_report",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "clli",
+              "required": true,
+              "allowMultiple": false,
+              "type": "string"
+            },
+            {
+              "paramType": "query",
+              "name": "requestInfo",
+              "required": true,
+              "allowMultiple": false,
+              "type": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    {
+      "path": "/reports/dmacs/pendingorder/clli_list",
+      "operations": [
+        {
+          "method": "GET",
+          "nickname": "pending_order_clli_list",
+          "parameters": [],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    {
+      "path": "/reports/dmacs/pendingorder/report",
+      "operations": [
+        {
+          "method": "POST",
+          "nickname": "pending_order_report_details",
+          "parameters": [
+            {
+              "paramType": "body",
+              "name": "body",
+              "required": false,
+              "allowMultiple": false,
+              "type": "object"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "type": "object"
+        }
+      ]
+    }
+  ],
+  "consumes": [
+    "application/json",
+    "application/x-www-form-urlencoded",
+    "application/xml",
+    "text/xml"
+  ],
+  "produces": [
+    "application/json",
+    "application/xml",
+    "text/xml",
+    "application/javascript",
+    "text/javascript"
+  ],
+  "models": {
+    "reports": {
+      "id": "reports",
+      "properties": {
+        "id": {
+          "type": "number",
+          "format": "double"
+        }
+      },
+      "required": []
+    }
+  }
+}
