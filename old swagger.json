@@ -1,0 +1,985 @@
+{
+  "apiVersion": "1.0.0",
+  "swaggerVersion": "1.2",
+  "basePath": "https://icecap2.eastus2.az.3pc.att.com/api/dmacs",
+  "resourcePath": "/inventdata",
+  "apis": [
+    {
+      "path": "/inventdata/replaceOrCreate",
+      "operations": [
+        {
+          "method": "POST",
+          "nickname": "replaceOrCreate",
+          "parameters": [
+            {
+              "paramType": "body",
+              "name": "data",
+              "description": "Model instance data",
+              "required": false,
+              "allowMultiple": false,
+              "type": "inventdata"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Replace an existing model instance or insert a new one into the data source.",
+          "type": "inventdata"
+        }
+      ]
+    },
+    {
+      "path": "/inventdata",
+      "operations": [
+        {
+          "method": "PUT",
+          "nickname": "replaceOrCreate",
+          "parameters": [
+            {
+              "paramType": "body",
+              "name": "data",
+              "description": "Model instance data",
+              "required": false,
+              "allowMultiple": false,
+              "type": "inventdata"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Replace an existing model instance or insert a new one into the data source.",
+          "type": "inventdata"
+        }
+      ]
+    },
+    {
+      "path": "/inventdata/upsertWithWhere",
+      "operations": [
+        {
+          "method": "POST",
+          "nickname": "upsertWithWhere",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "where",
+              "description": "Criteria to match model instances",
+              "required": false,
+              "allowMultiple": false,
+              "type": "object"
+            },
+            {
+              "paramType": "body",
+              "name": "data",
+              "description": "An object of model property name/value pairs",
+              "required": false,
+              "allowMultiple": false,
+              "type": "inventdata"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Update an existing model instance or insert a new one into the data source based on the where criteria.",
+          "type": "inventdata"
+        }
+      ]
+    },
+    {
+      "path": "/inventdata/{id}/replace",
+      "operations": [
+        {
+          "method": "POST",
+          "nickname": "replaceById",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "description": "Model id",
+              "required": true,
+              "allowMultiple": false,
+              "type": "any"
+            },
+            {
+              "paramType": "body",
+              "name": "data",
+              "description": "Model instance data",
+              "required": false,
+              "allowMultiple": false,
+              "type": "inventdata"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Replace attributes for a model instance and persist it into the data source.",
+          "type": "inventdata"
+        }
+      ]
+    },
+    {
+      "path": "/inventdata/{id}",
+      "operations": [
+        {
+          "method": "PUT",
+          "nickname": "replaceById",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "description": "Model id",
+              "required": true,
+              "allowMultiple": false,
+              "type": "any"
+            },
+            {
+              "paramType": "body",
+              "name": "data",
+              "description": "Model instance data",
+              "required": false,
+              "allowMultiple": false,
+              "type": "inventdata"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Replace attributes for a model instance and persist it into the data source.",
+          "type": "inventdata"
+        },
+        {
+          "method": "PATCH",
+          "nickname": "prototype.patchAttributes",
+          "parameters": [
+            {
+              "paramType": "body",
+              "name": "data",
+              "description": "An object of model property name/value pairs",
+              "required": false,
+              "allowMultiple": false,
+              "type": "inventdata"
+            },
+            {
+              "paramType": "path",
+              "name": "id",
+              "description": "inventdata id",
+              "required": true,
+              "allowMultiple": false,
+              "type": "any"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Patch attributes for a model instance and persist it into the data source.",
+          "type": "inventdata"
+        }
+      ]
+    },
+    {
+      "path": "/inventdata/change-stream",
+      "operations": [
+        {
+          "method": "POST",
+          "nickname": "createChangeStream",
+          "parameters": [
+            {
+              "paramType": "form",
+              "name": "options",
+              "required": false,
+              "allowMultiple": false,
+              "type": "object"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Create a change stream.",
+          "type": "ReadableStream"
+        },
+        {
+          "method": "GET",
+          "nickname": "createChangeStream",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "options",
+              "required": false,
+              "allowMultiple": false,
+              "type": "object"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "summary": "Create a change stream.",
+          "type": "ReadableStream"
+        }
+      ]
+    },
+    {
+      "path": "/inventdata/clli_summary",
+      "operations": [
+        {
+          "method": "GET",
+          "nickname": "clli_summary",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "clli",
+              "required": false,
+              "allowMultiple": false,
+              "type": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    {
+      "path": "/inventdata/clli_location_report",
+      "operations": [
+        {
+          "method": "GET",
+          "nickname": "clli_location_report",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "clli",
+              "required": false,
+              "allowMultiple": false,
+              "type": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    {
+      "path": "/inventdata/clli_details",
+      "operations": [
+        {
+          "method": "GET",
+          "nickname": "clli_details",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "clli",
+              "required": false,
+              "allowMultiple": false,
+              "type": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    {
+      "path": "/inventdata/main_groups",
+      "operations": [
+        {
+          "method": "GET",
+          "nickname": "main_groups",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "clli",
+              "required": false,
+              "allowMultiple": false,
+              "type": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    {
+      "path": "/inventdata/list_groups",
+      "operations": [
+        {
+          "method": "GET",
+          "nickname": "list_groups",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "clli",
+              "required": false,
+              "allowMultiple": false,
+              "type": "string"
+            },
+            {
+              "paramType": "query",
+              "name": "parentSGId",
+              "required": false,
+              "allowMultiple": false,
+              "type": "string"
+            },
+            {
+              "paramType": "query",
+              "name": "systemType",
+              "required": false,
+              "allowMultiple": false,
+              "type": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    {
+      "path": "/inventdata/dmacs_fields_data_with_Where",
+      "operations": [
+        {
+          "method": "GET",
+          "nickname": "dmacs_fields_data_with_Where",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "tableSerNo",
+              "required": false,
+              "allowMultiple": false,
+              "type": "string"
+            },
+            {
+              "paramType": "query",
+              "name": "mode",
+              "required": false,
+              "allowMultiple": false,
+              "type": "string"
+            },
+            {
+              "paramType": "query",
+              "name": "sgid",
+              "required": false,
+              "allowMultiple": false,
+              "type": "string"
+            },
+            {
+              "paramType": "query",
+              "name": "clli",
+              "required": false,
+              "allowMultiple": false,
+              "type": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    {
+      "path": "/inventdata/dmacs_fields_data",
+      "operations": [
+        {
+          "method": "GET",
+          "nickname": "dmacs_fields_data",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "clli",
+              "required": false,
+              "allowMultiple": false,
+              "type": "string"
+            },
+            {
+              "paramType": "query",
+              "name": "tableSerNo",
+              "required": false,
+              "allowMultiple": false,
+              "type": "string"
+            },
+            {
+              "paramType": "query",
+              "name": "mode",
+              "required": false,
+              "allowMultiple": false,
+              "type": "string"
+            },
+            {
+              "paramType": "query",
+              "name": "serNo",
+              "required": false,
+              "allowMultiple": false,
+              "type": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    {
+      "path": "/inventdata/dmacs_fields_titles",
+      "operations": [
+        {
+          "method": "GET",
+          "nickname": "dmacs_fields_titles",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "parentsgid",
+              "required": false,
+              "allowMultiple": false,
+              "type": "string"
+            },
+            {
+              "paramType": "query",
+              "name": "mode",
+              "required": false,
+              "allowMultiple": false,
+              "type": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    {
+      "path": "/inventdata/dmacs_association_sernos",
+      "operations": [
+        {
+          "method": "GET",
+          "nickname": "dmacs_association_sernos",
+          "parameters": [],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    {
+      "path": "/inventdata/complex_nodes",
+      "operations": [
+        {
+          "method": "GET",
+          "nickname": "complex_nodes",
+          "parameters": [],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    {
+      "path": "/inventdata/association_summary",
+      "operations": [
+        {
+          "method": "GET",
+          "nickname": "association_summary",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "clli",
+              "required": false,
+              "allowMultiple": false,
+              "type": "string"
+            },
+            {
+              "paramType": "query",
+              "name": "sgid",
+              "required": false,
+              "allowMultiple": false,
+              "type": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    {
+      "path": "/inventdata/dmacs_fields_ex",
+      "operations": [
+        {
+          "method": "GET",
+          "nickname": "dmacs_fields_ex",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "tableserno",
+              "required": false,
+              "allowMultiple": false,
+              "type": "string"
+            },
+            {
+              "paramType": "query",
+              "name": "clli",
+              "required": false,
+              "allowMultiple": false,
+              "type": "string"
+            },
+            {
+              "paramType": "query",
+              "name": "sgid",
+              "required": false,
+              "allowMultiple": false,
+              "type": "string"
+            },
+            {
+              "paramType": "query",
+              "name": "attuid",
+              "required": false,
+              "allowMultiple": false,
+              "type": "string"
+            },
+            {
+              "paramType": "query",
+              "name": "mode",
+              "required": false,
+              "allowMultiple": false,
+              "type": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    {
+      "path": "/inventdata/getElementMasterData",
+      "operations": [
+        {
+          "method": "GET",
+          "nickname": "getElementMasterData",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "clli",
+              "required": false,
+              "allowMultiple": false,
+              "type": "string"
+            },
+            {
+              "paramType": "query",
+              "name": "mode",
+              "required": false,
+              "allowMultiple": false,
+              "type": "string"
+            },
+            {
+              "paramType": "query",
+              "name": "def",
+              "required": false,
+              "allowMultiple": false,
+              "type": "string"
+            },
+            {
+              "paramType": "query",
+              "name": "guiType",
+              "required": false,
+              "allowMultiple": false,
+              "type": "string"
+            },
+            {
+              "paramType": "query",
+              "name": "listId",
+              "required": false,
+              "allowMultiple": false,
+              "type": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    {
+      "path": "/inventdata/getElementCustomData",
+      "operations": [
+        {
+          "method": "GET",
+          "nickname": "getElementCustomData",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "clli",
+              "required": false,
+              "allowMultiple": false,
+              "type": "string"
+            },
+            {
+              "paramType": "query",
+              "name": "guiType",
+              "required": false,
+              "allowMultiple": false,
+              "type": "string"
+            },
+            {
+              "paramType": "query",
+              "name": "listId",
+              "required": false,
+              "allowMultiple": false,
+              "type": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    {
+      "path": "/inventdata/dmacs_association_free_data",
+      "operations": [
+        {
+          "method": "GET",
+          "nickname": "dmacs_association_free_data",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "clli",
+              "required": false,
+              "allowMultiple": false,
+              "type": "string"
+            },
+            {
+              "paramType": "query",
+              "name": "sgid",
+              "required": false,
+              "allowMultiple": false,
+              "type": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    {
+      "path": "/inventdata/dmacs_association_meta_data",
+      "operations": [
+        {
+          "method": "GET",
+          "nickname": "dmacs_association_meta_data",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "tblSerNo",
+              "required": false,
+              "allowMultiple": false,
+              "type": "string"
+            },
+            {
+              "paramType": "query",
+              "name": "sysType",
+              "required": false,
+              "allowMultiple": false,
+              "type": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    {
+      "path": "/inventdata/dmacs_clli_addedit_equipment",
+      "operations": [
+        {
+          "method": "POST",
+          "nickname": "dmacs_clli_addedit_equipment",
+          "parameters": [
+            {
+              "paramType": "body",
+              "name": "requestBody",
+              "required": false,
+              "allowMultiple": false,
+              "type": "object"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    {
+      "path": "/inventdata/dmacs_clli_delete_equipment",
+      "operations": [
+        {
+          "method": "POST",
+          "nickname": "dmacs_clli_delete_equipment",
+          "parameters": [
+            {
+              "paramType": "body",
+              "name": "requestBody",
+              "required": false,
+              "allowMultiple": false,
+              "type": "object"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    {
+      "path": "/inventdata/dmacs_clli_find_equipment",
+      "operations": [
+        {
+          "method": "POST",
+          "nickname": "dmacs_clli_find_equipment",
+          "parameters": [
+            {
+              "paramType": "body",
+              "name": "request",
+              "required": false,
+              "allowMultiple": false,
+              "type": "object"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    {
+      "path": "/inventdata/dmacs_clli_find_equipmentpath",
+      "operations": [
+        {
+          "method": "GET",
+          "nickname": "dmacs_clli_find_equipmentpath",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "clli",
+              "required": false,
+              "allowMultiple": false,
+              "type": "string"
+            },
+            {
+              "paramType": "query",
+              "name": "sgid",
+              "required": false,
+              "allowMultiple": false,
+              "type": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    {
+      "path": "/inventdata/dmacs_check_equipment_add_rules",
+      "operations": [
+        {
+          "method": "GET",
+          "nickname": "dmacs_check_equipment_add_rules",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "clli",
+              "required": false,
+              "allowMultiple": false,
+              "type": "string"
+            },
+            {
+              "paramType": "query",
+              "name": "equipmentId",
+              "required": false,
+              "allowMultiple": false,
+              "type": "string"
+            },
+            {
+              "paramType": "query",
+              "name": "sgid",
+              "required": false,
+              "allowMultiple": false,
+              "type": "string"
+            },
+            {
+              "paramType": "query",
+              "name": "sysType",
+              "required": false,
+              "allowMultiple": false,
+              "type": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    {
+      "path": "/inventdata/dmacs_user_permissions",
+      "operations": [
+        {
+          "method": "GET",
+          "nickname": "dmacs_user_permissions",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "attuid",
+              "required": false,
+              "allowMultiple": false,
+              "type": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Request was successful"
+            }
+          ],
+          "type": "object"
+        }
+      ]
+    }
+  ],
+  "consumes": [
+    "application/json",
+    "application/x-www-form-urlencoded",
+    "application/xml",
+    "text/xml"
+  ],
+  "produces": [
+    "application/json",
+    "application/xml",
+    "text/xml",
+    "application/javascript",
+    "text/javascript"
+  ],
+  "models": {
+    "inventdata": {
+      "id": "inventdata",
+      "properties": {
+        "id": {
+          "type": "number",
+          "format": "double"
+        }
+      },
+      "required": []
+    }
+  }
+}
